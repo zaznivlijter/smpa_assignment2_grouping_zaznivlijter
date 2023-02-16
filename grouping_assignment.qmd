@@ -1,0 +1,192 @@
+---
+title: "SMPA - Grouping Assignment"
+author: "YourNameHere"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+format:
+  html:
+    self-contained: true
+---
+
+## Introduction
+
+**What data will you be working with?**
+
+A dataset of disbursements (payments and purchases) by the Donald J. Trump for President campaign committee from January 2017 through December 2018.
+
+This data and examples were developed as part of the NYT Open training, which we'll piggyback on here. Note that the dataset has been alterted for instructional purposes, so doesn't represent the original FEC data in its entirety.
+
+**Where we got this data:** [fec.gov](https://www.fec.gov/data/disbursements/?two_year_transaction_period=2018&cycle=2018&data_type=processed&committee_id=C00580100&min_date=01%2F01%2F2017&max_date=12%2F31%2F2018&line_number=F3P-23), the Federal Election Commission
+
+## Before you begin
+
+Take a moment to look at the various categories included for each disbursement.
+
+-   Notice that there are several date fields:
+
+    -   report year
+
+    -   FEC election year
+
+    -   election type
+
+    -   disbursement date
+
+-   There are a few fields about the recipient. Along with city and state, you have:
+
+    -   the recipient name
+
+    -   the payee's first and last name (an individual who was paid for the "recipient") and
+
+    -   the entity type (individual v. organization)
+
+## Before you begin
+
+Without doing any analysis yet, what are three questions you might try to answer using this dataset? Type your narrative answers in the spaces below.
+
+1.  
+
+2.  
+
+3.  
+
+## Coding Assignment Questions
+
+**Some questions to answer, please write R tidyverse code to help answer the questions below, and describe what you're doing either in text out "in the open" above the chunk, or in comments (prefaced by #) in the R chunk itself.**
+
+**You'll need to use grouping, filtering, or a combination of both to find the answers.**
+
+<br>
+
+How much was spent for the 2016 election cycle (primary and general combined) versus 2020?
+
+```{r}
+
+
+
+
+
+
+```
+
+Tally the spending for each month (distinguishing between say, Oct. 2017 v. Oct. 2018). In which month was spending the highest?
+
+```{r}
+
+
+
+
+
+
+```
+
+Using ggplot2, make a chart of the monthly spending you compiled above.
+
+```{r}
+
+
+
+
+
+
+```
+
+Which recipient was paid the most in the 2020 election cycle?
+
+```{r}
+
+
+
+
+
+
+```
+
+Look at what this recipient was paid for. What service or good (see the "disbursement_description") were they paid the most for?
+
+```{r}
+
+
+
+
+
+
+```
+
+How much in total did the Trump campaign "earn" over this whole period?
+
+Because this is a list of payments, positive numbers are expenses and negative numbers are earnings.
+
+```{r}
+
+
+
+
+
+
+```
+
+What's the most common reason (see "disbursement_description") for why the campaign got paid?
+
+```{r}
+
+
+
+
+
+
+```
+
+Who were the 3 biggest payors (in this weird case, "recipients" of overpayments) to the campaign?
+
+```{r}
+
+
+
+
+
+
+```
+
+Which two universities are on this list?
+
+```{r}
+
+
+
+
+
+
+```
+
+The campaign spent the most for which type of service or good ("disbursement_description")? Order the list so it's in descending order by size of payment.
+
+```{r}
+
+
+
+
+
+
+```
+
+For that type of service or good you identified, which 2 entities received the bulk of those payments?
+
+```{r}
+
+
+
+
+
+
+```
+
+Who are the top 5 individuals (vs. organization) paid by the committee?
+
+```{r}
+
+
+
+
+
+
+```
