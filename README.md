@@ -1,4 +1,4 @@
-# smpa_assignment2_grouping
+# Assignment #2: Grouping in R
 
 Fork this repository so you have your own version under your Github account (rather than mine) to change and modify. Rename the repository to append your last name, e.g. `smpa_assignment2_grouping_kessler`.
 
