@@ -6,12 +6,14 @@ Clone that new repository as a new project within RStudio/Posit Cloud. Make sure
 
 ![](images/Screen%20Shot%202023-02-16%20at%2012.50.21%20PM.png)
 
-Once that's done, open up the file named grouping_assignment.qmd, where you'll find the series of questions for this assignment.
+Once that's done:
 
-Please craft your code using the R tidyverse packages we've gone over to return the required results to answer the questions, and include comments along the way explaining what you' done for each answer.
+-   Open up the file named grouping_assignment.qmd, where you'll find the series of questions for this assignment.
 
-As you move through working on the questions, make sure you "commit" at least three times along the way. You're welcome to do it more often should you choose, but ensure you've done at least three total commits.
+-   Please craft your code using the R tidyverse packages we've gone over to return the required results to answer the questions, and include comments along the way explaining what you' done for each answer.
 
-When you're all done, ensure that you've committed and pushed all your changes to Github.
+-   As you move through working on the questions, make sure you "commit" at least three times along the way. You're welcome to do it more often should you choose, but ensure you've done at least three total commits.
 
-Submit on Blackboard the web URL for your Github repo (the web address of the repository itself, not the clone link), as well as the URL for your Posit Cloud project.
+-   When you're all done, ensure that you've committed and pushed all your changes to Github.
+
+-   Submit on Blackboard the web URL for your Github repo (the web address of the repository itself, not the clone link), as well as the URL for your Posit Cloud project.
