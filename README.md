@@ -1,6 +1,6 @@
 # smpa_assignment2_grouping
 
-Fork this repository so you have your own version under your Github account (rather than mine) to change and modify. Rename the repository to append your last name, e.g. `smpa_assignment_filteringsorting_kessler`.
+Fork this repository so you have your own version under your Github account (rather than mine) to change and modify. Rename the repository to append your last name, e.g. `smpa_assignment2_grouping_kessler`.
 
 Clone that new repository as a new project within RStudio/Posit Cloud. Make sure you do this within the "Teaching Space" and that you choose the "Assignment2" list before creating the project from github.
 
