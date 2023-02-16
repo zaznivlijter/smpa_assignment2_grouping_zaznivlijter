@@ -7,25 +7,43 @@ format:
     self-contained: true
 ---
 
+```{r}
+
+#load libraries
+library(tidyverse)
+library(lubridate)
+
+#load data
+payments <- readRDS("data/trump_campaign_payments.rds")
+
+```
+
 ## Introduction
 
 **What data will you be working with?**
 
-A dataset of disbursements (payments and purchases) by the Donald J. Trump for President campaign committee from January 2017 through December 2018.
+A dataset of disbursements (payments and purchases) by the Donald J. Trump for President campaign committee during the 2020 election cycle. The included payments are from 2017 and 2018.
 
-This data and examples were developed as part of the NYT Open training, which we'll piggyback on here. Note that the dataset has been alterted for instructional purposes, so doesn't represent the original FEC data in its entirety.
+This data and examples were developed as part of the NYT Open training, which we've adapted from here. Note that the dataset has been alterted for instructional purposes, so doesn't represent the original FEC data in its entirety.
 
-**Where we got this data:** [fec.gov](https://www.fec.gov/data/disbursements/?two_year_transaction_period=2018&cycle=2018&data_type=processed&committee_id=C00580100&min_date=01%2F01%2F2017&max_date=12%2F31%2F2018&line_number=F3P-23), the Federal Election Commission
+In the environment tab in the upper right, click on the `payments` dataset to open the RStudio viewer to examine the data. You can also run the chunk below as well to bring up a slice of the data.
+
+```{r}
+
+head(payments)
+
+
+```
 
 ## Before you begin
 
 Take a moment to look at the various categories included for each disbursement.
 
--   Notice that there are several date fields:
+-   Notice that there are several date-related fields:
+
+    -   FEC election cycle
 
     -   report year
-
-    -   FEC election year
 
     -   election type
 
@@ -39,9 +57,9 @@ Take a moment to look at the various categories included for each disbursement.
 
     -   the entity type (individual v. organization)
 
-## Before you begin
+## Initial Narrative Questions
 
-Without doing any analysis yet, what are three questions you might try to answer using this dataset? Type your narrative answers in the spaces below.
+Without doing any analysis yet, what are three questions you might try to answer using this dataset? Write your narrative answers in the spaces below.
 
 1.  
 
@@ -51,13 +69,27 @@ Without doing any analysis yet, what are three questions you might try to answer
 
 ## Coding Assignment Questions
 
-**Some questions to answer, please write R tidyverse code to help answer the questions below, and describe what you're doing either in text out "in the open" above the chunk, or in comments (prefaced by #) in the R chunk itself.**
+**Please write your R tidyverse code to help answer the questions below in the provided R chunks. You can make more than one chunk if you prefer.**
 
-**You'll need to use grouping, filtering, or a combination of both to find the answers.**
+**Also, describe what you're doing either in text out "in the open" above the chunk, or in comments (prefaced by #) in the R chunk itself.**
+
+**You'll need to use grouping, filtering, or a combination of both to find the answers. Remember that R is case-sensitive when you refer to any text values within the columns**
 
 <br>
 
-How much was spent for the 2016 election cycle (primary and general combined) versus 2020?
+How much was spent in the 2017 vs. 2018 reporting year?
+
+```{r}
+
+
+
+
+
+
+
+```
+
+Tally the total overall disbursement amounts for each month (distinguishing between say, Oct. 2018 v. Oct. 2019). In which month was spending the highest?
 
 ```{r}
 
@@ -68,31 +100,10 @@ How much was spent for the 2016 election cycle (primary and general combined) ve
 
 ```
 
-Tally the spending for each month (distinguishing between say, Oct. 2017 v. Oct. 2018). In which month was spending the highest?
+Which recipient (recipient_name) was paid the most in the 2020 election cycle?
 
 ```{r}
 
-
-
-
-
-
-```
-
-Using ggplot2, make a chart of the monthly spending you compiled above.
-
-```{r}
-
-
-
-
-
-
-```
-
-Which recipient was paid the most in the 2020 election cycle?
-
-```{r}
 
 
 
@@ -112,9 +123,7 @@ Look at what this recipient was paid for. What service or good (see the "disburs
 
 ```
 
-How much in total did the Trump campaign "earn" over this whole period?
-
-Because this is a list of payments, positive numbers are expenses and negative numbers are earnings.
+What's the most common category overall (see "disbursement_description") the campaign spent money on?
 
 ```{r}
 
@@ -125,9 +134,10 @@ Because this is a list of payments, positive numbers are expenses and negative n
 
 ```
 
-What's the most common reason (see "disbursement_description") for why the campaign got paid?
+Who were the 5 biggest recipients of campaign spending on "LEGAL CONSULTING"..?
 
 ```{r}
+
 
 
 
@@ -136,9 +146,11 @@ What's the most common reason (see "disbursement_description") for why the campa
 
 ```
 
-Who were the 3 biggest payors (in this weird case, "recipients" of overpayments) to the campaign?
+
+Who are the top 5 individuals (vs. organization) were paid by the campaign committee?
 
 ```{r}
+
 
 
 
@@ -147,42 +159,11 @@ Who were the 3 biggest payors (in this weird case, "recipients" of overpayments)
 
 ```
 
-Which two universities are on this list?
+
+For the indvidual who was paid the most, which payment category (disbursement_description) was the top one for him or her? And how much money were they paid in that category?
 
 ```{r}
 
-
-
-
-
-
-```
-
-The campaign spent the most for which type of service or good ("disbursement_description")? Order the list so it's in descending order by size of payment.
-
-```{r}
-
-
-
-
-
-
-```
-
-For that type of service or good you identified, which 2 entities received the bulk of those payments?
-
-```{r}
-
-
-
-
-
-
-```
-
-Who are the top 5 individuals (vs. organization) paid by the committee?
-
-```{r}
 
 
 
