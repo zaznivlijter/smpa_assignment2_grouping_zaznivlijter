@@ -94,16 +94,16 @@ Tally the total overall disbursement amounts for each month (distinguishing betw
 
 
 
-
 ```
 
 Which recipient (recipient_name) was paid the most in the 2020 election cycle?
 
 ```{r}
 
+trump_campaign_payments %>% 
+arrange(desc(disbursement_amount))
 
-
-
+American Made Media Consultants were paid the most in the 2020 election cycle
 
 
 
