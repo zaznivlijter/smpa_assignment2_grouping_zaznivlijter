@@ -91,9 +91,6 @@ Tally the total overall disbursement amounts for each month (distinguishing betw
 ```{r}
 
 
-
-
-
 ```
 
 Which recipient (recipient_name) was paid the most in the 2020 election cycle?
@@ -113,10 +110,11 @@ Look at what this recipient was paid for. What service or good (see the "disburs
 
 ```{r}
 
+trump_campaign_payments %>% 
+filter(recipient_name== "AMERICAN MADE MEDIA CONSULTANTS, LLC") %>%
+arrange(desc(disbursement_amount))
 
-
-
-
+They were paid most for Paid Media 
 
 ```
 
