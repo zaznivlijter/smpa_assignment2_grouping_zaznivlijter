@@ -121,9 +121,12 @@ They were paid most for Paid Media
 What's the most common category overall (see "disbursement_description") the campaign spent money on?
 
 ```{r}
+trump_campaign_payments %>% 
+filter(recipient_name== "AMERICAN MADE MEDIA CONSULTANTS, LLC") %>%
+group_by(disbursement_description) %>% 
+summarise(dispursement_amount=n())
 
-
-
+The campaign most commonly spent money on online advertising 
 
 
 
