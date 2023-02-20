@@ -61,11 +61,11 @@ Take a moment to look at the various categories included for each disbursement.
 
 Without doing any analysis yet, what are three questions you might try to answer using this dataset? Write your narrative answers in the spaces below.
 
-1.  
+1.  What companies/ corporations are reciving the most money from Trump and how does this influence their business choices?
 
-2.  
+2.  How much money did Trump spend on advertising and campaigning?
 
-3.  
+3.  Which consulting companies are working for the Trump capmpaign?
 
 ## Coding Assignment Questions
 
@@ -80,12 +80,9 @@ Without doing any analysis yet, what are three questions you might try to answer
 How much was spent in the 2017 vs. 2018 reporting year?
 
 ```{r}
-
-
-
-
-
-
+payments %>% 
+group_by(report_year) %>% 
+summarise(dispursement_amount=n())
 
 ```
 
