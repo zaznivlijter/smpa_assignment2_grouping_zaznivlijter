@@ -135,9 +135,12 @@ The campaign most commonly spent money on online advertising
 Who were the 5 biggest recipients of campaign spending on "LEGAL CONSULTING"..?
 
 ```{r}
+trump_campaign_payments %>%
+filter(disbursement_description=="LEGAL CONSULTING")%>%
+group_by(recipient_name)%>%
+arrange(desc(disbursement_amount))
 
-
-
+The 5 biggest recipients on legal consulting were Jones Day, KASOWITZ, BENSON, TORRESS & FRIEDMAN,	MINTZ LEVIN,THE LAW OFFICES OF ALAN S. FUTERFAS,	MCDERMOTT WILL & EMERY
 
 
 
